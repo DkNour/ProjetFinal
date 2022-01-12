@@ -1,0 +1,77 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-md-12">
+
+                
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Publications</h4>
+                    </div>                   
+                    <!--
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table mat-table [dataSource]="dataSource" class= "mat-elevation-z8"  *ngIf="dataSource!=null">
+                                
+                                <ng-container matColumnDef="id">
+                                    <th mat-header-cell *matHeaderCellDef> id </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                                  </ng-container>
+                                
+                                  <ng-container matColumnDef="titre">
+                                    <th mat-header-cell *matHeaderCellDef> cin </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.titre}} </td>
+                                  </ng-container>
+                                
+                                
+                                  <ng-container matColumnDef="dateapparition">
+                                    <th mat-header-cell *matHeaderCellDef> createdDate </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.dateapparition}} </td>
+                                  </ng-container>
+                                
+                                  <ng-container matColumnDef="type">
+                                    <th mat-header-cell *matHeaderCellDef> type </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+                                  </ng-container>
+                                
+
+                            </table>
+                        -->                       
+                         <table class= "table" >
+                             <thead class="text-primary">
+                          
+                             <th>id</th>     
+                             <th>Titre</th>  
+                             <th>Auteurs</th> 
+                             <th>Date Apparition</th>  
+                             <th>Type</th>  
+                             <th> Action </th>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let element of dataSource">
+                                <td > {{element.id}} </td>
+                                <td > {{element.titre}} </td>
+                                <tr *ngFor="let element of dataSource"></tr>
+                                <td > {{element.auteur}} </td>
+                                <td > {{element.dateapparition}} </td>
+                                <td > {{element.type}} </td>
+                                <td > 
+                                    <button mat-button routerLink = "{{element.id}}/edit"><mat-icon>edit</mat-icon></button> 
+                                    <button (click)="delete(element.id)" mat-button> <mat-icon>delete</mat-icon> </button>
+                                </td>
+
+                               </tr>
+
+                               
+                                
+                                
+                        </tbody>
+                         </table>
+                         
+                </div>
+                <button mat-raised-button type="submit" class="btn btn-danger pull-right" routerLink = "/create"><mat-icon>add</mat-icon>Ajouter</button>
+            </div>
+        </div>
+    </div>
+  </div>
