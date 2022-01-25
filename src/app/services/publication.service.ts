@@ -12,7 +12,8 @@ export class PublicationService {
 
   tab:Publication[]=[]  
 
-  private apiServer = 'http://localhost:9000/PUBLICATION-SERVICE';
+  //private apiServer = 'http://localhost:9000/PUBLICATION-SERVICE';
+  private apiServer = 'http://localhost:8099';
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
